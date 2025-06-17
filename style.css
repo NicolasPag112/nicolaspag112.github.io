@@ -1,0 +1,442 @@
+/* Variáveis CSS para cores - facilita a manutenção */
+:root {
+    --primary-color: #3498db; /* Azul */
+    --secondary-color: #2c3e50; /* Cinza escuro */
+    --text-color: #333;
+    --light-bg: #f8f8f8;
+    --white: #fff;
+    --border-color: #eee;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Exemplo de fonte Google Fonts */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Cabeçalho (Hero Section) --- */
+.hero-section {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+    position: relative; /* Para posicionar a imagem */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.hero-section h1 {
+    margin: 10px 0;
+    font-size: 2.8em;
+    color: var(--white);
+}
+
+.hero-section .subtitle {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.8em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Seções Gerais --- */
+.section {
+    padding: 60px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+/* --- Habilidades --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.skills-grid h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.skills-grid ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-grid li {
+    background-color: var(--white);
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: inline-block; /* Para centralizar os itens de lista */
+}
+
+/* --- Projetos --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.project-card .technologies {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.project-card .project-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-card .project-links a:hover {
+    color: var(--primary-color);
+}
+
+.project-card .project-links a i {
+    margin-right: 5px;
+}
+
+/* --- Experiência e Educação --- */
+.job-item, .education-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.job-item:last-child, .education-item:last-child {
+    border-bottom: none;
+}
+
+.job-item h3, .education-item h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.company-name, .institution {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.dates {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.job-item ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.job-item li {
+    margin-bottom: 5px;
+}
+
+/* --- Contato --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9; /* Um tom mais escuro */
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+/* --- Responsividade (Ajustes para telas menores) --- */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1em;
+    }
+
+    .section h2 {
+        font-size: 1.8em;
+    }
+
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .skills-grid li {
+        width: auto; /* Remove largura fixa para mobile */
+        display: block; /* Ocupa a largura total para mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .hero-section {
+        padding: 40px 15px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    .social-links a {
+        font-size: 1.5em;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+}
+/* No seu style.css, adicione estes estilos (onde fizer sentido, talvez no início ou após o body) */
+
+/* --- Navegação Principal --- */
+#navbar {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 15px 0;
+    position: sticky; /* Para o sticky header */
+    top: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para destaque */
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar .logo {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#navbar .logo:hover {
+    color: var(--primary-color);
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Para os itens do menu ficarem em linha */
+}
+
+#navbar ul li {
+    margin-left: 25px;
+}
+
+#navbar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding-bottom: 5px; /* Para a borda de hover */
+    position: relative;
+}
+
+#navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Efeito de sublinhado ao passar o mouse */
+#navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-out;
+}
+
+#navbar ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* Estilos para o botão de menu responsivo (hambúrguer) */
+.menu-toggle {
+    display: none; /* Escondido por padrão em desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001; /* Acima da navbar para ser clicável */
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsividade para o menu de navegação */
+@media (max-width: 768px) {
+    #navbar .container {
+        flex-wrap: wrap; /* Permite que o logo e o menu-toggle se ajustem */
+        justify-content: space-between;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 60px; /* Ajuste para ficar abaixo da navbar */
+        left: 0;
+        height: 0; /* Escondido por padrão */
+        overflow: hidden; /* Esconde o conteúdo extra */
+        transition: height 0.3s ease-in-out;
+    }
+
+    #navbar ul.active {
+        height: auto; /* Altura automática para mostrar o menu */
+        padding-bottom: 20px; /* Espaçamento inferior quando ativo */
+    }
+
+    #navbar ul li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: flex; /* Mostra o botão hambúrguer em mobile */
+    }
+}
