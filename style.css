@@ -440,3 +440,16 @@ footer {
         display: flex; /* Mostra o botão hambúrguer em mobile */
     }
 }
+
+/* --- Estilos para a lista Sobre Mim --- */
+.about-list {
+    list-style-type: disc; /* Força a aparição das bolinhas */
+    margin-left: 20px;     /* Dá o recuo para a direita (identação) */
+    margin-bottom: 20px;   /* Espaço abaixo da lista antes do próximo elemento */
+    padding-left: 20px;    /* Garante espaço para a bolinha não ficar fora */
+}
+
+.about-list li {
+    margin-bottom: 10px;   /* Espaço entre um tópico e outro para facilitar a leitura */
+    color: var(--text-color); /* Mantém a cor padrão do seu texto */
+}
